@@ -1,10 +1,10 @@
 {
   "name": "vue-neutralinojs-template",
-  "version": "2.0.0",
+  "version": "0.1.0",
   "type": "module",
   "description": "Starter template for Neutralino.js with Vite.js and Vue.js",
   "scripts": {
-    "postinstall": "neu update",
+    "postinstall": "node -e \"require('fs').copyFileSync('neutralino.config.dev.json','neutralino.config.json')\" && neu update",
     "predev": "node -e \"require('fs').copyFileSync('neutralino.config.prod.json','neutralino.config.json')\"",
     "dev": "vite build && neu run",
     "dev:hmr": "node scripts/dev-hmr.js",
