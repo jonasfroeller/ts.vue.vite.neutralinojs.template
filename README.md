@@ -36,11 +36,8 @@ npx neu update
 ## Development
 
 ```bash
-# Start Vite dev server (port 8080)
-yarn dev
-
 # Build and run in Neutralino window
-yarn serve:neu
+yarn dev
 ```
 
 ## Production Build
@@ -67,9 +64,29 @@ Your app binaries will be in the `dist/` folder.
 └── package.json            # Package config
 ```
 
+## Why Neutralino?
+
+**Blazing fast** compared to alternatives:
+
+|                  | Neutralino     | Tauri            | Electron         |
+| ---------------- | -------------- | ---------------- | ---------------- |
+| Min. binary size | ~2-3 MB        | ~5-10 MB         | ~150 MB+         |
+| Startup time     | Instant        | Fast             | Slow             |
+| Compile step     | None (JS only) | Rust compilation | None             |
+| Runtime          | System webview | System webview   | Bundled Chromium |
+
+**Advantages:**
+- No bundled runtime – uses Edge WebView2 on Windows
+- Zero compile step – just JS bundling, no Rust/Go
+- Instant startup – native webview loads directly
+
+**Trade-offs:**
+- Less native API coverage than Tauri
+- Smaller ecosystem/community
+
 ## Version Info
 
 - Vue 3.5.x
-- Vite 6.x
-- TypeScript 5.7
-- Neutralino 5.4.x
+- Vite 7.x
+- TypeScript 5.9
+- Neutralino 6.4.x
