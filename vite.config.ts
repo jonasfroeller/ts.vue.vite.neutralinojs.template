@@ -24,7 +24,7 @@ function neutralinoDevPlugin() {
               window.NL_PORT = ${port};
               window.NL_TOKEN = "${token}";
               window.NL_CTOKEN = "${ctoken}";
-              window.NL_CWD = "${process.cwd().replace(/\\\\/g, '\\\\\\\\')}";
+              window.NL_CWD = "${process.cwd().replace(/\\/g, '\\\\')}";
               window.NL_ARGS = [];
               window.NL_OS = "Windows";
               window.NL_APPID = "com.example.neuvitevue";
